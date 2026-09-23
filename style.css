@@ -1,0 +1,1546 @@
+/* ==================================================
+   TECHING v1.2
+   MAIN STYLES
+================================================== */
+
+
+:root{
+
+    --primary:#2563eb;
+    --primary-dark:#1e40af;
+    --secondary:#38bdf8;
+
+    --dark:#071426;
+    --dark-soft:#0f172a;
+
+    --white:#ffffff;
+    --light:#f8fafc;
+
+    --text:#475569;
+
+    --border:#e2e8f0;
+
+}
+
+
+
+/* ==================================================
+RESET
+================================================== */
+
+
+*{
+
+margin:0;
+padding:0;
+box-sizing:border-box;
+
+}
+
+
+html{
+
+scroll-behavior:smooth;
+
+}
+
+
+
+body{
+
+font-family:'Inter',Arial,sans-serif;
+
+color:var(--text);
+
+background:white;
+
+overflow-x:hidden;
+
+}
+
+
+
+img{
+
+max-width:100%;
+
+display:block;
+
+}
+
+
+
+.container{
+
+width:90%;
+
+max-width:1200px;
+
+margin:auto;
+
+}
+
+
+
+/* ==================================================
+HEADER
+================================================== */
+
+
+header{
+
+position:fixed;
+
+top:0;
+
+left:0;
+
+width:100%;
+
+z-index:999;
+
+transition:.4s ease;
+
+}
+
+
+
+header.scrolled{
+
+
+background:rgba(255,255,255,.95);
+
+backdrop-filter:blur(15px);
+
+box-shadow:
+
+0 10px 30px rgba(0,0,0,.08);
+
+
+}
+
+
+
+.navbar{
+
+
+height:95px;
+
+display:flex;
+
+align-items:center;
+
+justify-content:space-between;
+
+transition:.4s;
+
+
+}
+
+
+
+header.scrolled .navbar{
+
+height:75px;
+
+}
+
+
+
+/* LOGO */
+
+
+.logo,
+.footer-logo{
+
+
+font-size:32px;
+
+font-weight:800;
+
+letter-spacing:1px;
+
+color:white;
+
+
+}
+
+
+
+header.scrolled .logo{
+
+color:var(--dark);
+
+}
+
+
+
+.logo span,
+.footer-logo span{
+
+
+color:var(--primary);
+
+}
+
+
+
+
+/* MENU */
+
+
+.menu{
+
+display:flex;
+
+gap:35px;
+
+list-style:none;
+
+}
+
+
+
+.menu a{
+
+
+color:white;
+
+font-size:15px;
+
+font-weight:500;
+
+text-decoration:none;
+
+position:relative;
+
+transition:.3s;
+
+
+}
+
+
+
+header.scrolled .menu a{
+
+color:var(--dark);
+
+}
+
+
+
+.menu a:after{
+
+
+content:"";
+
+position:absolute;
+
+bottom:-8px;
+
+left:0;
+
+width:0;
+
+height:2px;
+
+background:var(--primary);
+
+transition:.35s;
+
+
+}
+
+
+
+.menu a:hover{
+
+
+color:var(--primary);
+
+}
+
+
+
+.menu a:hover:after{
+
+
+width:100%;
+
+}
+
+
+
+/* ==================================================
+BUTTONS
+================================================== */
+
+
+.btn{
+
+
+background:
+
+linear-gradient(
+135deg,
+#2563eb,
+#38bdf8
+);
+
+
+
+padding:15px 30px;
+
+border-radius:10px;
+
+color:white;
+
+font-weight:600;
+
+text-decoration:none;
+
+display:inline-block;
+
+transition:.35s;
+
+box-shadow:
+
+0 15px 35px rgba(37,99,235,.25);
+
+
+}
+
+
+
+.btn:hover{
+
+
+transform:translateY(-5px);
+
+box-shadow:
+
+0 25px 50px rgba(37,99,235,.35);
+
+
+}
+
+
+
+.btn-outline{
+
+
+border:1px solid white;
+
+padding:15px 30px;
+
+border-radius:10px;
+
+color:white;
+
+text-decoration:none;
+
+transition:.35s;
+
+}
+
+
+
+.btn-outline:hover{
+
+
+background:white;
+
+color:var(--dark);
+
+transform:translateY(-5px);
+
+
+}
+
+
+
+/* ==================================================
+HERO
+================================================== */
+
+
+.hero{
+
+
+height:100vh;
+
+min-height:700px;
+
+
+background:
+
+linear-gradient(
+rgba(3,12,25,.85),
+rgba(3,12,25,.85)
+),
+
+url("https://images.unsplash.com/photo-1516321318423-f06f85e504b3")
+
+center/cover;
+
+
+display:flex;
+
+align-items:center;
+
+
+}
+
+
+
+.hero-content{
+
+
+max-width:800px;
+
+color:white;
+
+
+animation:heroAnimation 1.2s ease;
+
+
+}
+
+
+
+@keyframes heroAnimation{
+
+
+from{
+
+opacity:0;
+
+transform:translateY(40px);
+
+}
+
+
+to{
+
+opacity:1;
+
+transform:none;
+
+}
+
+
+}
+
+
+
+.hero h1{
+
+
+font-size:60px;
+
+line-height:1.1;
+
+font-weight:800;
+
+
+}
+
+
+
+.hero h1 span{
+
+
+color:#38bdf8;
+
+
+}
+
+
+
+.hero p{
+
+
+font-size:20px;
+
+line-height:1.8;
+
+margin:30px 0;
+
+color:#dbeafe;
+
+
+}
+
+
+
+.hero-buttons{
+
+
+display:flex;
+
+gap:20px;
+
+
+}
+
+
+
+
+/* ==================================================
+SECTION GENERAL
+================================================== */
+
+
+section{
+
+padding:100px 0;
+
+}
+
+
+
+.section-title{
+
+
+text-align:center;
+
+margin-bottom:60px;
+
+
+}
+
+
+
+.section-title h2{
+
+
+font-size:42px;
+
+color:var(--dark);
+
+font-weight:800;
+
+
+}
+
+
+
+.section-title p{
+
+
+margin-top:15px;
+
+font-size:17px;
+
+
+}
+
+
+
+
+/* ==================================================
+SERVICES
+================================================== */
+
+
+.services-grid{
+
+
+display:grid;
+
+grid-template-columns:repeat(3,1fr);
+
+gap:30px;
+
+
+}
+
+
+
+.service-card{
+
+
+background:white;
+
+padding:40px 35px;
+
+border-radius:25px;
+
+box-shadow:
+
+0 20px 50px rgba(0,0,0,.08);
+
+
+transition:.4s ease;
+
+border:1px solid transparent;
+
+position:relative;
+
+overflow:hidden;
+
+
+}
+
+
+
+.service-card:before{
+
+
+content:"";
+
+position:absolute;
+
+top:0;
+
+left:0;
+
+width:100%;
+
+height:4px;
+
+background:
+
+linear-gradient(
+90deg,
+#2563eb,
+#38bdf8
+);
+
+
+transform:scaleX(0);
+
+transition:.4s;
+
+
+}
+
+
+
+.service-card:hover:before{
+
+
+transform:scaleX(1);
+
+
+}
+
+
+
+.service-card:hover{
+
+
+transform:translateY(-15px);
+
+box-shadow:
+
+0 30px 60px rgba(37,99,235,.18);
+
+
+}
+
+
+
+.service-icon{
+
+
+font-size:50px;
+
+margin-bottom:25px;
+
+transition:.4s;
+
+
+}
+
+
+
+.service-card:hover .service-icon{
+
+
+transform:
+
+scale(1.15)
+rotate(5deg);
+
+
+}
+
+
+
+.service-card h3{
+
+
+font-size:25px;
+
+color:var(--dark);
+
+margin-bottom:15px;
+
+
+}
+
+
+
+.service-card ul{
+
+
+list-style:none;
+
+margin-top:25px;
+
+
+}
+
+
+
+.service-card li{
+
+
+margin:12px 0;
+
+
+}
+
+
+
+/* ==================================================
+ABOUT
+================================================== */
+
+
+.about-grid{
+
+
+display:grid;
+
+grid-template-columns:1fr 1fr;
+
+gap:70px;
+
+align-items:center;
+
+
+}
+
+
+
+.about-image img{
+
+
+border-radius:25px;
+
+box-shadow:
+
+0 30px 60px rgba(0,0,0,.15);
+
+
+}
+
+
+
+.about-content h2{
+
+
+font-size:42px;
+
+color:var(--dark);
+
+
+}
+
+
+
+.about-content p{
+
+
+line-height:1.9;
+
+margin:20px 0;
+
+
+}
+
+
+
+/* ==================================================
+STATS
+================================================== */
+
+
+.stats-section{
+
+
+background:#eff6ff;
+
+
+}
+
+
+
+.stats-grid{
+
+
+display:grid;
+
+grid-template-columns:repeat(4,1fr);
+
+text-align:center;
+
+
+}
+
+
+
+.stat-item h3{
+
+
+font-size:55px;
+
+display:inline-block;
+
+color:var(--primary);
+
+font-weight:800;
+
+
+}
+
+
+
+.stat-item span{
+
+
+font-size:45px;
+
+color:var(--primary);
+
+}
+
+
+
+.stat-item p{
+
+
+font-weight:600;
+
+
+}
+
+
+
+/* ==================================================
+PROJECTS
+================================================== */
+
+
+.projects-grid{
+
+
+display:grid;
+
+grid-template-columns:repeat(3,1fr);
+
+gap:30px;
+
+
+}
+
+
+
+.project-card{
+
+
+border-radius:25px;
+
+overflow:hidden;
+
+background:white;
+
+box-shadow:
+
+0 20px 50px rgba(0,0,0,.08);
+
+transition:.4s;
+
+
+}
+
+
+
+.project-card:hover{
+
+
+transform:translateY(-12px);
+
+
+}
+
+
+
+.project-image{
+
+overflow:hidden;
+
+}
+
+
+
+.project-image img{
+
+
+height:260px;
+
+width:100%;
+
+object-fit:cover;
+
+transition:.5s;
+
+
+}
+
+
+
+.project-card:hover img{
+
+
+transform:scale(1.1);
+
+
+}
+
+
+
+.project-content{
+
+
+padding:30px;
+
+
+}
+
+
+
+.project-content h3{
+
+
+color:var(--dark);
+
+font-size:23px;
+
+
+}
+
+
+
+.project-content a{
+
+
+color:var(--primary);
+
+text-decoration:none;
+
+font-weight:600;
+
+
+}
+
+
+
+
+/* ==================================================
+DARK SECTION
+================================================== */
+
+
+.technology-section{
+
+
+background:var(--dark);
+
+
+color:white;
+
+
+}
+
+
+
+.technology-section .section-title h2{
+
+
+color:white;
+
+
+}
+
+
+
+.technology-section .section-title p{
+
+
+color:#cbd5e1;
+
+
+}
+
+
+
+.features-grid{
+
+
+display:grid;
+
+grid-template-columns:repeat(3,1fr);
+
+gap:30px;
+
+
+}
+
+
+
+.feature-card{
+
+
+padding:40px;
+
+border-radius:25px;
+
+border:1px solid rgba(255,255,255,.15);
+
+transition:.4s;
+
+
+}
+
+
+
+.feature-card:hover{
+
+
+background:rgba(255,255,255,.08);
+
+transform:translateY(-10px);
+
+
+}
+
+
+
+.feature-icon{
+
+
+font-size:30px;
+
+color:#38bdf8;
+
+font-weight:800;
+
+margin-bottom:20px;
+
+
+}
+
+
+
+.feature-card h3{
+
+
+margin-bottom:15px;
+
+
+}
+
+
+
+/* ==================================================
+CTA
+================================================== */
+
+
+.cta-section{
+
+
+background:
+
+linear-gradient(
+135deg,
+#0f172a,
+#2563eb,
+#38bdf8
+);
+
+
+background-size:200% 200%;
+
+animation:gradientMove 8s ease infinite;
+
+
+text-align:center;
+
+color:white;
+
+
+}
+
+
+
+@keyframes gradientMove{
+
+
+0%{
+
+background-position:0% 50%;
+
+}
+
+
+50%{
+
+background-position:100% 50%;
+
+}
+
+
+100%{
+
+background-position:0% 50%;
+
+}
+
+
+}
+
+
+
+.cta-section h2{
+
+
+font-size:45px;
+
+margin-bottom:20px;
+
+
+}
+
+
+
+/* ==================================================
+FOOTER
+================================================== */
+
+
+footer{
+
+
+background:#242424;
+
+color:white;
+
+padding-top:80px;
+
+
+}
+
+
+
+.footer-grid{
+
+
+display:grid;
+
+grid-template-columns:2fr 1fr 1fr 1fr;
+
+gap:40px;
+
+padding-bottom:60px;
+
+
+}
+
+
+
+.footer-brand p{
+
+
+color:#cbd5e1;
+
+margin:25px 0;
+
+max-width:300px;
+
+
+}
+
+
+
+.footer-column h3{
+
+
+font-size:22px;
+
+margin-bottom:25px;
+
+
+}
+
+
+
+.footer-column ul{
+
+
+list-style:none;
+
+
+}
+
+
+
+.footer-column li{
+
+
+margin:15px 0;
+
+color:#cbd5e1;
+
+
+transition:.3s;
+
+
+}
+
+
+
+.footer-column li:hover{
+
+
+color:#38bdf8;
+
+padding-left:8px;
+
+
+}
+
+
+
+
+.social-links{
+
+
+display:flex;
+
+gap:15px;
+
+
+}
+
+
+
+.social-links a{
+
+
+width:45px;
+
+height:45px;
+
+border-radius:50%;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+background:#3b3b3b;
+
+color:white;
+
+text-decoration:none;
+
+transition:.3s;
+
+
+}
+
+
+
+.social-links a:hover{
+
+
+background:var(--primary);
+
+transform:translateY(-5px);
+
+
+}
+
+
+
+.footer-bottom{
+
+
+background:#181818;
+
+padding:25px;
+
+text-align:center;
+
+color:#94a3b8;
+
+
+}
+
+
+
+
+/* ==================================================
+ANIMATION SCROLL
+================================================== */
+
+
+.reveal{
+
+
+opacity:0;
+
+transform:translateY(40px);
+
+transition:1s;
+
+
+}
+
+
+
+.reveal.active{
+
+
+opacity:1;
+
+transform:none;
+
+
+}
+
+
+
+
+/* ==================================================
+RESPONSIVE
+================================================== */
+
+
+@media(max-width:900px){
+
+
+.menu{
+
+display:none;
+
+}
+
+
+
+.services-grid,
+.projects-grid,
+.features-grid,
+.about-grid,
+.stats-grid,
+.footer-grid{
+
+
+grid-template-columns:1fr;
+
+
+}
+
+
+
+.hero h1{
+
+
+font-size:42px;
+
+
+}
+
+
+.hero-buttons{
+
+
+flex-direction:column;
+
+
+}
+
+
+
+}
+/* ==================================================
+   AJUSTES TECHING v1.2
+   SOLO CAMBIOS SOLICITADOS
+================================================== */
+
+
+/* =========================
+ESPACIO BOTON CTA
+========================= */
+
+
+.cta-button{
+
+    margin-top:25px;
+    
+    }
+    
+    
+    
+    /* =========================
+    REDES SOCIALES FOOTER
+    ========================= */
+    
+    
+    .social-links{
+    
+    display:flex;
+    
+    gap:15px;
+    
+    margin-top:25px;
+    
+    }
+    
+    
+    
+    .social-links a{
+    
+    
+    width:42px;
+    
+    height:42px;
+    
+    border-radius:50%;
+    
+    
+    display:flex;
+    
+    align-items:center;
+    
+    justify-content:center;
+    
+    
+    background:rgba(255,255,255,.12);
+    
+    
+    color:white;
+    
+    
+    font-size:18px;
+    
+    
+    text-decoration:none;
+    
+    
+    transition:.35s ease;
+    
+    
+    }
+    
+    
+    
+    .social-links a:hover{
+    
+    
+    background:#2563eb;
+    
+    
+    transform:translateY(-5px);
+    
+    
+    box-shadow:
+    
+    0 10px 25px rgba(37,99,235,.35);
+    
+    
+    }
+    
+    
+    
+    .social-links i{
+    
+    line-height:1;
+    
+    }
+    
+    
+    
+    
+    
+    /* =========================
+    FEATURES
+    MANTENER DISEÑO ORIGINAL
+    ========================= */
+    
+    
+    .feature-card{
+    
+    transition:.35s ease;
+    
+    }
+    
+    
+    
+    .feature-card:hover{
+    
+    
+    transform:translateY(-8px);
+    
+    
+    }
+    
+    
+    
+    /* =========================
+    CONTADORES
+    MOVIMIENTO SUAVE
+    ========================= */
+    
+    
+    .counter{
+    
+    
+    transition:.3s ease;
+    
+    
+    }
+    
+    /* BOTÓN CTA - CONTRASTE SOBRE FONDO AZUL */
+
+.cta-button{
+
+    background:white;
+    
+    color:#2563eb;
+    
+    box-shadow:
+    
+    0 15px 35px rgba(0,0,0,.20);
+    
+    }
+    
+    
+    .cta-button:hover{
+    
+    background:#f8fafc;
+    
+    color:#1e40af;
+    
+    transform:translateY(-5px);
+    
+    box-shadow:
+    
+    0 25px 50px rgba(0,0,0,.30);
+    
+    }
