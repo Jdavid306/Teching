@@ -1544,3 +1544,107 @@ ESPACIO BOTON CTA
     0 25px 50px rgba(0,0,0,.30);
     
     }
+    /* ==================================================
+   LOGO TECHING - HEADER
+   ================================================== */
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.logo img{
+    height:58px;
+    width:auto;
+    display:block;
+    object-fit:contain;
+}
+
+.logo-text{
+    font-size:32px;
+    font-weight:800;
+    letter-spacing:1px;
+    color:white !important;
+    transition:.4s ease;
+}
+
+.logo-text > span{
+    color:#2563eb !important;
+    transition:.4s ease;
+}
+
+
+/* ==================================================
+   HOVER DEL LOGO - HEADER OSCURO
+   ================================================== */
+
+.logo:hover .logo-text{
+    color:#2563eb !important;
+}
+
+.logo:hover .logo-text > span{
+    color:white !important;
+}
+
+
+/* ==================================================
+   HEADER AL HACER SCROLL
+   ================================================== */
+
+header.scrolled .logo-text{
+    color:var(--dark) !important;
+}
+
+header.scrolled .logo-text > span{
+    color:#2563eb !important;
+}
+
+
+/* ==================================================
+   HOVER DEL LOGO - HEADER BLANCO
+   ================================================== */
+
+header.scrolled .logo:hover .logo-text{
+    color:#2563eb !important;
+}
+
+header.scrolled .logo:hover .logo-text > span{
+    color:var(--dark) !important;
+}
+
+/* ==================================================
+   BOTÓN CTA - WHATSAPP A LA DERECHA
+   ================================================== */
+
+   .cta-button{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:14px;
+}
+
+.cta-button i{
+    font-size:22px;
+    line-height:1;
+}
+
+.cta-button:hover i{
+    transform:scale(1.12);
+    transition:.3s ease;
+}
+/* ==================================================
+   ENLACES DE CONTACTO - FOOTER
+   ================================================== */
+
+   .footer-column ul li a,
+   .footer-column ul li a:link,
+   .footer-column ul li a:visited,
+   .footer-column ul li a:hover,
+   .footer-column ul li a:focus,
+   .footer-column ul li a:active{
+       color:#cbd5e1 !important;
+       text-decoration:none !important;
+       border:none !important;
+       box-shadow:none !important;
+   }
